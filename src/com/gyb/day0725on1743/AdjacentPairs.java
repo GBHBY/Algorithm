@@ -34,7 +34,6 @@ public class AdjacentPairs {
     public static void main(String[] args) throws IOException {
         Scanner scan = new Scanner(System.in);
 
-        int[][] adjacentPairs = new int[scan.nextInt()][scan.nextInt()];
     }
 
 
