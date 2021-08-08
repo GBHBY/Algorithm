@@ -1,4 +1,4 @@
-package com.gyb.day0807InsertDirectlySort;
+package com.gyb.day0806InsertDirectlySort;
 
 /**
  * @author gb
