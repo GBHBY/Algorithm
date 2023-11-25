@@ -5,16 +5,29 @@ package org.gyb.algorithm.sort;
  * @desc 排序
  * @date 2023/11/25 21:34
  */
-public interface Sort {
-    int[] arr = new int[]{10, 5, 6, 4, 11, 88, 33, 2, 1, 5};
+public abstract class Sort {
+    static int[] arr = new int[]{10, 5, 6, 4, 11, 88, 33, 2, 1, 5};
     /**
      * 排序算法
      *
      * @param arr 要排序的数组
      */
-    void sort(int[] arr);
+    void sortAndPrint(int[] arr){
+        System.out.print("排序前：");
+        print(arr);
+        int[] sorted = sort(arr);
+        System.out.print("排序后：");
+        print(sorted);
+    }
 
-    static void print(int[] arr) {
+    /**
+     *
+     * @param arr
+     */
+    abstract int[] sort(int[] arr);
+
+
+    void print(int[] arr) {
         for (int i = 0; i < arr.length; i++) {
             if (i != arr.length - 1) {
                 System.out.print(arr[i] + "      ");
