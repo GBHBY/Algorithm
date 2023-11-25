@@ -1,4 +1,4 @@
-package org.gyb.algorithm;
+package org.gyb.algorithm.lru;
 
 
 import lombok.AccessLevel;
@@ -13,14 +13,13 @@ import java.util.concurrent.ConcurrentHashMap;
  * 基于hashmap + 双向链表实现LRU
  * <p>
  * hashMap用来检索定位到Node，Node用于删除和更新
- * hashMap中的key
- * <p>
+ * hashMap中的key <p>
  * LRU least recent used 最近最少使用
  * 一般用于缓存中，比如缓存中间件redis
- *
- * <1> 队列不行吗？
- * 不行队列只能做到先进先出，但是重复用到中间的数据时无法把中间的数据移动到顶端。
- * <2> 单链表不行吗？
+ * <p>
+ * <1> 队列不行吗？<p>
+ * 不行，队列只能做到先进先出，但是重复用到中间的数据时无法把中间的数据移动到顶端。<p>
+ * <2> 单链表不行吗？<p>
  * 单链表能实现新来的放头部，最久不用的在尾部删除。但删除的时候需要遍历到尾部，因为单链表只有头指针。
  * 在用到已经用到过的数据时，还要遍历整合链表，来确定是否用过，然后再遍历到响应位置来剔除的节点，并重新放在头部。这效率可想而知。
  * <p>
